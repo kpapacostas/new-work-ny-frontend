@@ -35,8 +35,12 @@ class Dashboard extends Component {
           >
             NEW WORK NEW YORK
           </Header>
-          <NewPostModal newPost={newPost} currentUser={currentUser} />
-          <Posts getAllPosts={getAllPosts} posts={posts} />
+          <Header
+            style={{ background: "none", padding: "1%", float: "center" }}
+            id="coming-soon-header"
+          >
+            More Coming Soon! Stay tuned!
+          </Header>
         </div>
       </Layout>
     );
