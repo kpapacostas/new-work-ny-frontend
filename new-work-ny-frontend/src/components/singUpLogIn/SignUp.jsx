@@ -12,23 +12,6 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
 
-  const handleChange = (event) => {
-    let node = event.target.name;
-    let fieldData = event.target.value;
-    switch (node) {
-      case "first_name":
-        setFirstName(fieldData);
-      case "last_name":
-        setLastName(fieldData);
-      case "email":
-        setEmail(fieldData);
-      case "password":
-        setPassword(fieldData);
-      case "password_confirmation":
-        setPasswordConfirmation(fieldData);
-    }
-  };
-
   const handleSend = () => {
     let data = {
       first_name,
@@ -38,6 +21,11 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
       password_confirmation,
     };
     handleSubmit("signup", data);
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setPasswordConfirmation("");
   };
 
   // if (formView) {
@@ -71,7 +59,7 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
               placeholder="FIRST NAME"
               className="input"
               name="first_name"
-              onChange={(event) => handleChange(event)}
+              onChange={(event) => setFirstName(event.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -84,7 +72,7 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
               placeholder="LAST NAME"
               className="input"
               name="last_name"
-              onChange={(event) => handleChange(event)}
+              onChange={(event) => setLastName(event.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -95,7 +83,7 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
               placeholder="EMAIL ADDRESS"
               className="input"
               name="email"
-              onChange={(event) => handleChange(event)}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -107,7 +95,7 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
               className="input"
               name="password"
               type="password"
-              onChange={(event) => handleChange(event)}
+              onChange={(event) => setPassword(event.target.value)}
             />
           </Form.Item>
           <Form.Item
@@ -119,7 +107,7 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
               className="input"
               name="password_confirmation"
               type="password_confirmation"
-              onChange={(event) => handleChange(event)}
+              onChange={(event) => setPasswordConfirmation(event.target.value)}
             />
           </Form.Item>
           <br />

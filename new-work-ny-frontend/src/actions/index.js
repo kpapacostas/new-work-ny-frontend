@@ -15,6 +15,8 @@ export const register = (dispatch, userData) => {
     dispatch({ type: "ASYNC_START" });
     fetchNewUser(userData).then((data) => {
       dispatch({ type: NEW_USER, data });
+      history.push("/");
+      alert("Thanks for registering! PLEASE LOGIN");
     });
   };
 };
