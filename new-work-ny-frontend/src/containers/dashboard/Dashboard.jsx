@@ -18,11 +18,13 @@ class Dashboard extends Component {
     const posts = this.props.posts;
 
     return (
-      <Layout
+      <div
         style={{
           backgroundImage: "url(" + background + ")",
           backgroundRepeat: "repeat-y",
-          backgroundSize: "900px"
+          backgroundSize: "cover",
+          height: "800px",
+          backgroundPosition: "center",
         }}
       >
         <div>
@@ -43,7 +45,7 @@ class Dashboard extends Component {
             More Coming Soon! Stay tuned!
           </Header>
         </div>
-      </Layout>
+      </div>
     );
   }
 }
