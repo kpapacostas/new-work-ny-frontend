@@ -1,0 +1,67 @@
+.container {
+  pointer-events: yes;
+}
+
+.header-container {
+  background-color: none;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 9fr 1fr 9fr;
+  justify-items: center;
+}
+
+.grid-element {
+}
+
+#middle-line {
+  margin-right: 30px;
+  border-left: 4px solid rgb(58, 56, 56);
+  height: 500px;
+  margin-top: 200%;
+}
+
+#into-button {
+  margin-top: 20%;
+  margin-left: 20%;
+  font-size: 2vw;
+  font-weight: medium;
+  font-family: "Andale Mono";
+  border: none;
+  background: none;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 50px #fff, 0 0 60px #fff, 0 0 80px #fff, 0 0 90px #fff;
+}
+
+#home-header {
+  background-color: none;
+  font-family: "Andale Mono";
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  font-size: 5vw;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 2%;
+  width: 100%;
+}
+
+#sub-header {
+  background: none;
+  cursor: pointer;
+  margin-top: 40%;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Andale Mono";
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+}
+
+/* .divider {
+  display: flex;
+  border-left: 4px solid black;
+  margin-left: 35%;
+  height: 150px;
+} */

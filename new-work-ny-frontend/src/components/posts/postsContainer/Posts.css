@@ -1,0 +1,42 @@
+#looking-header {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Andale Mono";
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+}
+
+#category-button {
+  cursor: pointer;
+  width: 15em;
+  height: 5em;
+  border-color: rgb(88, 86, 86);
+  border-width: 3px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Andale Mono";
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+}
+
+#button-row {
+}
+
+#container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-box-orient: horizontal;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+#flex-item {
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
