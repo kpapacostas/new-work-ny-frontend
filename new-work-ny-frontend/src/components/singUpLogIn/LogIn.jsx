@@ -83,7 +83,6 @@ const LogIn = ({ handleSubmit, handleFormView, formView }) => {
             }}
             className="login-button"
             htmlType="submit"
-            onClick={handlesend}
           >
             LOGIN
           </Button>
