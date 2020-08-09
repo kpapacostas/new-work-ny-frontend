@@ -22,6 +22,7 @@ class Dashboard extends Component {
         style={{
           backgroundImage: "url(" + background + ")",
           backgroundRepeat: "repeat-y",
+          backgroundSize: "900px"
         }}
       >
         <div>
