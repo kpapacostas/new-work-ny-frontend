@@ -121,6 +121,7 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
                 boxShadow: "3px 3px #fff",
               }}
               className="signin-button"
+              onClick={handleSend}
             >
               SIGN UP
             </Button>
