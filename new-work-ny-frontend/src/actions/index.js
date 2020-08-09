@@ -25,6 +25,7 @@ export const loggingIn = (dispatch, userData) => {
     fetchLogIn(userData).then((data) => {
       if (data.user) {
         dispatch({ type: LOG_IN, data });
+        debugger;
         history.push("/dashboard");
       } else {
         history.push("/");
