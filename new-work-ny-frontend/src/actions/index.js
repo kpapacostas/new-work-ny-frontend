@@ -14,9 +14,14 @@ export const register = (dispatch, userData) => {
   return (dispatch) => {
     dispatch({ type: "ASYNC_START" });
     fetchNewUser(userData).then((data) => {
-      dispatch({ type: NEW_USER, data });
-      history.push("/");
-      alert("Thanks for registering! PLEASE LOGIN");
+      if (data.user) {
+        dispatch({ type: NEW_USER, data });
+        history.push("/");
+        alert("Please Login!");
+      } else {
+        history.push("/");
+        alert("Login failed, please try again.");
+      }
     });
   };
 };

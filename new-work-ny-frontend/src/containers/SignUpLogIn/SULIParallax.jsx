@@ -3,8 +3,12 @@ import LogIn from "../../components/singUpLogIn/LogIn";
 import SignUp from "../../components/singUpLogIn/SignUp";
 import { ParallaxLayer } from "react-spring/renderprops-addons";
 import background from "../../nycPic.jpg";
+import { useState } from "react";
+import ErrorModal from "../../components/ErrorModal";
 
 const SULIParallax = ({ handleSubmit }) => {
+  const [alertView, setAlertView] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
   return (
     <ParallaxLayer
       offset={1}
@@ -16,9 +20,24 @@ const SULIParallax = ({ handleSubmit }) => {
       }}
     >
       <div className="grid-container" style={{ height: "1300px" }}>
-        <LogIn handleSubmit={handleSubmit} parallaxObj />
+        <LogIn
+          setAlertMessage={setAlertMessage}
+          setAlertView={setAlertView}
+          handleSubmit={handleSubmit}
+          parallaxObj
+        />
+        <ErrorModal
+          message={alertMessage}
+          view={alertView}
+          setAlertView={setAlertView}
+        />
         <div className="grid-element" id="middle-line"></div>
-        <SignUp handleSubmit={handleSubmit} parallaxObj />
+        <SignUp
+          setAlertMessage={setAlertMessage}
+          setAlertView={setAlertView}
+          handleSubmit={handleSubmit}
+          parallaxObj
+        />
       </div>
     </ParallaxLayer>
   );

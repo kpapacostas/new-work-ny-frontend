@@ -16,10 +16,8 @@ class Home extends Component {
   handleSubmit = (dir, data) => {
     if (dir === "login") {
       this.props.loggingIn(null, data);
-      this.parallax.scrollTo(2);
     } else {
       this.props.register(null, data);
-      this.parallax.scrollTo(2);
     }
   };
 

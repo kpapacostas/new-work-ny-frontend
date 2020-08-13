@@ -5,7 +5,7 @@ import { Form, Input } from "antd";
 import "./SignUp.css";
 const { Header } = Layout;
 
-const SignUp = ({ handleSubmit, handleFormView, formView }) => {
+const SignUp = ({ handleSubmit, setAlertView, setAlertMessage }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirmation, setPasswordConfirmation] = useState("");
@@ -20,12 +20,14 @@ const SignUp = ({ handleSubmit, handleFormView, formView }) => {
       password,
       password_confirmation,
     };
-    handleSubmit("signup", data);
+    setAlertView(true);
+    setAlertMessage("Thanks for signing up! Please login");
     setFirstName("");
     setLastName("");
     setEmail("");
     setPassword("");
     setPasswordConfirmation("");
+    handleSubmit("signup", data);
   };
 
   // if (formView) {
