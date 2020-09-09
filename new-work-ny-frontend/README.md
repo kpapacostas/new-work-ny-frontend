@@ -1,8 +1,8 @@
-######NEW WORK NEW YORK
+###### NEW WORK NEW YORK
 
 An application used by dancers and choreographers to network and new works based on project dates, genres, pay scale, etc. Built with React, Redux, JS, Ant Design and CSS.
 
-##Status
+## Status
 
 This project is currently in development. Users can currently create posts and filter by profession.
 Functionality in progress:
@@ -10,7 +10,7 @@ Stricter authentication
 Sort by additional paramters
 Ability for users to create profile pages
 
-##Installation and Setup Instructions
+## Installation and Setup Instructions
 
 **Clone down backed repository:**
 
@@ -24,7 +24,7 @@ rails s
 
 - You will need node and yarn installed globally on your machine.
 
-#Installation:
+# Installation:
 
 macOS:
 
@@ -43,7 +43,8 @@ To Visit App:
 
 localhost:3001
 
-##Reflection
+## Reflection
+
 This was a passion project built to create a platform for burgening dancers and choreophraphers to create new works easily. In NYC it is incredibly difficult to overcome the hurdles of time, money, competition and anonymity amongst the masses in order to make new work. That lack of organizational and communicative ease leads to very few new pieces ever coming to fruition. This platform is an attempt to bridge that gap and bring eager artists to one communal space.
 
 I have set out to build an app that allows you to both search for current projects and post projects you're looking to staff, and sort according to a variety of parameters that are most relevant to artists in NYC.
