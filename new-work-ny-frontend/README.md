@@ -1,4 +1,4 @@
-###### NEW WORK NEW YORK
+# NEW WORK NEW YORK
 
 An application used by dancers and choreographers to network and new works based on project dates, genres, pay scale, etc. Built with React, Redux, JS, Ant Design and CSS.
 
@@ -24,7 +24,7 @@ rails s
 
 - You will need node and yarn installed globally on your machine.
 
-# Installation:
+###### Installation:
 
 macOS:
 
