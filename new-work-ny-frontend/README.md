@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NEW WORK NY
+An application used by dancers and choreographers to network and new works based on project dates, genres, pay scale, etc. Built with React, Redux, JS, Ant Design and CSS.
 
-## Available Scripts
+Status
+This project is currently in development. Users can currently create posts and filter by profession.
+Functionality in progress:
+Stricter authentication
+Sort by additional paramters
+Ability for users to create profile pages
 
-In the project directory, you can run:
+Installation and Setup Instructions
 
-### `yarn start`
+Clone down backed repository:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://github.com/kpapacostas/new_work_ny_backend
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+To start the database server:
 
-### `yarn test`
+rails s
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone down this repository
 
-### `yarn build`
+- You will need node and yarn installed globally on your machine.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installation:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+macOS:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+brew install yarn
 
-### `yarn eject`
+For other operating systems, use the following guide by selecting your OS from the dropdown:
+https://classic.yarnpkg.com/en/docs/install/#mac-stable
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To Start Server:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+yarn start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- You will be asked if you want to run on another port since localhost:3000 will be taken by our backend server, type `y`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To Visit App:
 
-## Learn More
+localhost:3001
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Reflection
+This was a passion project built to create a platform for burgening dancers and choreophraphers to create new works easily. In NYC it is incredibly difficult to overcome the hurdles of time, money, competition and anonymity amongst the masses in order to make new work. That lack of organizational and communicative ease leads to very few new pieces ever coming to fruition. This platform is an attempt to bridge that gap and bring eager artists to one communal space.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I have set out to build an app that allows you to both search for current projects and post projects you're looking to staff, and sort according to a variety of parameters that are most relevant to artists in NYC.
 
-### Code Splitting
+I also set out to style a React app implementing a good amount of custom CSS, and CSS Grid. I'd used Semantic and Bootstrap in the past, and felt hindered by their limitations and my own lack of understanding more advanced CSS properties.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Using React Hooks was another big part of wanting to build this app using create-react-app, and find a way to integrate Redux and Hooks as seemlessly as possible as Redux becomes less frequently utilized.

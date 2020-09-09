@@ -2,15 +2,11 @@ import React from "react";
 import { Layout, Modal, Button } from "antd";
 const { Header } = Layout;
 
-const ErrorModal = ({ message, visible, setAlertView }) => {
+const ErrorModal = ({ message, visible, setVisible }) => {
+  console.log(message);
   return (
-    <Modal
-      onCancel={() => setAlertView(false)}
-      title="NEW POST"
-      visible={visible}
-      footer={null}
-    >
-      <Header style={{ backgroud: "none" }}>{message}</Header>
+    <Modal onCancel={() => setVisible(false)} visible={visible} footer={null}>
+      <Header style={{ background: "none" }}>{message}</Header>
     </Modal>
   );
 };
