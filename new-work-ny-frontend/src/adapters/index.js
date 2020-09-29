@@ -49,6 +49,10 @@ export const fetchPosts = async () => {
     headers: headers,
     method: "GET",
   });
-  const json = await resp.json();
-  return json;
+  const response = await resp;
+  if (response.ok) {
+    return response.json();
+  } else {
+    return null;
+  }
 };

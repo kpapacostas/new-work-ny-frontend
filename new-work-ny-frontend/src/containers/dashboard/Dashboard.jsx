@@ -39,10 +39,13 @@ class Dashboard extends Component {
             NEW WORK NEW YORK
           </Header>
           <Header
-            style={{ background: "none", padding: "1%", float: "center" }}
             id="coming-soon-header"
+            style={{
+              background: "none",
+              padding: "1%",
+            }}
           >
-            More Coming Soon! Stay tuned!
+            More coming soon!
           </Header>
         </div>
       </div>
