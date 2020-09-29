@@ -108,7 +108,7 @@ const SignUp = ({ handleSubmit }) => {
               placeholder="PASSWORD CONFIRMATION"
               className="input"
               name="password_confirmation"
-              type="password_confirmation"
+              type="password"
               onChange={(event) => setPasswordConfirmation(event.target.value)}
             />
           </Form.Item>
