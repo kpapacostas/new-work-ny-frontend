@@ -19,8 +19,7 @@ export const register = (dispatch, userData) => {
         history.push("/");
         alert("Please Login!");
       } else {
-        history.push("/");
-        alert("Login failed, please try again.");
+        alert("Signup failed, please try again.");
       }
     });
   };
@@ -34,7 +33,6 @@ export const loggingIn = (dispatch, userData) => {
         dispatch({ type: LOG_IN, data });
         history.push("/dashboard");
       } else {
-        history.push("/");
         alert("Login failed, please try again.");
       }
     });
