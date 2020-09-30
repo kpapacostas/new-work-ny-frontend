@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import * as actions from "../../actions";
 import NewPostModal from "../../components/posts/NewPostModal";
 import Posts from "../../components/posts/postsContainer/Posts";
+import { useEffect, useState } from "react";
 
 const { Header } = Layout;
 
@@ -38,15 +39,9 @@ class Dashboard extends Component {
           >
             NEW WORK NEW YORK
           </Header>
-          <Header
-            id="coming-soon-header"
-            style={{
-              background: "none",
-              padding: "1%",
-            }}
-          >
-            More coming soon!
-          </Header>
+
+          <NewPostModal currentUser={currentUser} newPost={newPost} />
+          <Posts getAllPosts={getAllPosts} posts={posts} />
         </div>
       </div>
     );

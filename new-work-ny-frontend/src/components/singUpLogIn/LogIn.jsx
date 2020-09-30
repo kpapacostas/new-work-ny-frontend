@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import "./LogIn.css";
 const { Header } = Layout;
 
-const LogIn = ({ handleSubmit, handleFormView, formView }) => {
+const LogIn = ({ handleSubmit }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -23,7 +23,6 @@ const LogIn = ({ handleSubmit, handleFormView, formView }) => {
       password,
     };
     handleSubmit("login", data);
-    handleFormView("login");
     setEmail("");
     setPassword("");
   };

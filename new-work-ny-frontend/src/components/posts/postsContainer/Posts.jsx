@@ -2,20 +2,25 @@ import React, { Component } from "react";
 import { ParallaxLayer } from "react-spring/renderprops-addons";
 import { Layout, Button, Space, Col, Row, Divider } from "antd";
 import PostCard from "../postcard/PostCard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import "./Posts.css";
 
 const { Header, Sider } = Layout;
 
 const Posts = ({ getAllPosts, posts }) => {
+  const [postList, editPostList] = useState([]);
+
   useEffect(() => {
     getAllPosts();
-  }, []);
 
-  const postCards = posts.map((post, i) => (
-    <PostCard id="flex-item" post={post} key={post.id} />
-  ));
+    if (posts.length) {
+      let postCards = posts.map((post, i) => (
+        <PostCard id="flex-item" post={post} key={post.id} />
+      ));
+      editPostList(postCards);
+    }
+  });
 
   return (
     <Layout
@@ -44,12 +49,11 @@ const Posts = ({ getAllPosts, posts }) => {
       <br />
       <br />
       <Divider orientation="center" />
-      <div id="container" align="middle" style={{ background: "none" }}>
-        <Space size="large">{posts.length ? postCards : null}</Space>
-        <Space size="large">{posts.length ? postCards : null}</Space>
-        <Space size="large">{posts.length ? postCards : null}</Space>
-        <Space size="large">{posts.length ? postCards : null}</Space>
-      </div>
+      {postList !== [] ? (
+        <div id="container" align="middle" style={{ background: "none" }}>
+          <Space size="large">{postList.length ? postList : null}</Space>
+        </div>
+      ) : null}
     </Layout>
   );
 };

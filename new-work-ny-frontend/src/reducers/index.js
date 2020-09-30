@@ -15,7 +15,7 @@ const userReducer = (state = null, action) => {
 const postsReducer = (state = [], action) => {
   switch (action.type) {
     case NEW_POST:
-      return state.posts.concat(action.data.post);
+      return [...state.posts, action.data.post];
     case GET_POSTS:
       return action.data.posts;
     default:

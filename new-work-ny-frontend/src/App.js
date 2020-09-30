@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="app">
       <Provider store={store}>
+        {console.log("in app", store.getState())}
         <Router>
           <Switch>
             <Route exact path="/" render={(props) => <Home {...props} />} />

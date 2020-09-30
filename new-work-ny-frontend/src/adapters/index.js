@@ -29,6 +29,23 @@ export const fetchLogIn = async (data) => {
     }
   );
   const json = await resp.json();
+  if (json.status !== 404) {
+    return json;
+  } else {
+    return "false";
+  }
+};
+
+export const fetchUser = async () => {
+  const resp = await fetch(
+    "https://new-work-ny-backend.herokuapp.com/logged_in",
+    {
+      headers: headers,
+      method: "GET",
+    }
+  );
+  const json = await resp.json();
+  console.log("in fetch user", json);
   return json;
 };
 
@@ -50,9 +67,11 @@ export const fetchPosts = async () => {
     method: "GET",
   });
   const response = await resp;
-  if (response.ok) {
-    return response.json();
-  } else {
+
+  if (response.statusText === "No Content" || response.posts === undefined) {
     return null;
+  } else {
+    console.log("in fetch posts", response);
+    return response;
   }
 };

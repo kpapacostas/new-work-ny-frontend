@@ -19,7 +19,7 @@ const NewPostModal = ({ currentUser, newPost }) => {
   };
 
   const handleSubmit = () => {
-    let author_id = currentUser.id;
+    let author_id = parseInt(window.localStorage.getItem("userId"));
     let data = {
       title,
       description,
